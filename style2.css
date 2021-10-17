@@ -1,0 +1,149 @@
+/* Arquivos Style */
+/* bloco de reset de alguns estilos */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+body {      /*Bloco completo da página*/
+    width: 100%;
+    min-height: 100vh;
+    background-color:whitesmoke;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.instagram-wrapper {
+    display: flex;
+    align-items: center; /* alinhamento eixo y */
+    justify-content: start;/* alinhamento eixo y */
+    width:60%;
+    height: 100vh;
+}
+
+.instagram-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:50%
+}
+
+.instagram-phone img {
+    width:50rem;
+}
+
+.instagram-continue {
+    display: flex;
+    align-items: center; /* horizontal */
+    justify-content: space-around; /* vertical */
+    flex-direction: column;
+    width: 50%;
+    min-height: 34rem;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid lightgray;
+}
+
+.group:nth-child(1){ /* pega os grupos de forma sequencial */
+    min-height: 19rem;    
+}
+
+.instagram-logo {
+    height: 3rem;
+}
+
+.profile-foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /*para ser um circulo, a figura deve ser tamanho quadrado*/
+    overflow: hidden; /* hidden vai esconder o que ultrassar o raio*/
+}
+
+.profile-foto img {
+    height: 8rem;
+}
+
+.instagram-login {
+    background-color: #0095f6;
+    color:#ffffff;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.instagram-logout{
+    color:#0095f6;
+    margin-top: 1rem;
+}
+
+.not-account {
+    color: rgb(160,160,160);
+}
+
+.link-blue {
+    color: #0095f6;
+}
+
+.get_the_app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;    
+}
+
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly; /* distribui de forma igualitária */
+    align-items: center;
+    padding: 1rem;
+}
+
+.app-download {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+.app-download:nth-child(1) {
+    background-image: url('./img/apple-button.png');
+}
+
+.app-download:nth-child(2) {
+    background-image: url('./img/googleplay-button.png');
+}
+
+/* media queries - vai acertar os tamanhos de exibição em função do aparelho*/
+
+@media (max-width:1024px){
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width:650px){
+    .instagram-wrapper {
+        width: 90%;
+    }
+    .instagram-phone {
+        display: none;
+    }
+    .instagram-continue {
+        width:100%;
+    }
+}
